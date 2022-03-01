@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pig Game</title>
-    <link rel="stylesheet" href="./Styles/normalize.css">
-    <link rel="stylesheet" href="./Styles/styles.css">
-    <link rel="shortcut icon" href="./Resources/favicon.png" type="image/x-icon">
-</head>
-<body>
-    <main>
-        <section class="middle">
-            <button class="new btn">
-                New Game
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pig Game</title>
+        <link rel="stylesheet" href="./Styles/normalize.css" />
+        <link rel="stylesheet" href="./Styles/styles.css" />
+        <link rel="shortcut icon" href="./Resources/favicon.png" type="image/x-icon"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Monoton&family=Playball&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="players">
+                <div class="player player--0">
+                    <h2 class="name name--0">Player 1</h2>
+                    <span class="score score--0">123</span>
+                    
+                    <div class="current">
+                        <span class="current-label">Current</span>
+                        <span class="current-score current--0">123</span>
+                    </div>
+                </div>
+                
+                <div class="player player--1">
+                    <h2 class="name name--1">Player 2</h2>
+                    <span class="score score--1">123</span>
+                    
+                    <div class="current">
+                        <span class="current-label">Current</span>
+                        <span class="current-score current--1">123</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn--new">
+                🔄 New Game
             </button>
             <img class="dice" src="" alt="">
-            <button class="roll btn">
-                Roll the Dice
+            <button class="btn btn--roll">
+                🎲 Roll the Dice
             </button>
-            <button class="hold btn">
-                Hold
+            <button class="btn btn--hold">
+                📥 Hold
             </button>
-        </section>
+        </main>
+        <footer>
+            <span>Armin Parvin</span>
+        </footer>
 
-        <section class="players">
-            <div>
-                <span>Player 1</span>
-                <span></span>
-    
-                <span>Current</span>
-                <span></span>
-            </div>
-    
-            <div>
-                <span>Player 1</span>
-                <span></span>
-    
-                <span>Current</span>
-                <span></span>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <span>Armin Parvin</span>
-    </footer>
-</body>
+        <script src="./JS/script.js"></script>
+    </body>
 </html>

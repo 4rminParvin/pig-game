@@ -1,27 +1,114 @@
 html {
     background: linear-gradient(150deg, #f66680, 30%, #206ADA, 70%, #f66680);
+    font-size: 16px;
+    font-family: 'Monoton', cursive;
+    color: #2d2141;
+    text-transform: uppercase;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 main {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: 70vh;
+    position: relative;
+}
+
+.btn {
+    text-align: center;
+    font-family: 'Playball', cursive;
+    font-size: 1.5rem;
+    width: 12rem;
+    height: 3rem;
+    position: absolute;
+    border: 0;
+    border-radius: 40px;
+    color: #534E5A;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn--new {
+    top: 2rem;
+}
+
+.btn--roll {
+    bottom: 6rem;
+}
+
+.btn--hold {
+    bottom: 2rem;
+}
+
+.btn:active {
+    transform: translate(0, 5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+}
+
+.btn:focus {
+    outline: none;
 }
 
 .players {
+    width: 100%;
+    height: 100%;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    width: 70vw;
-    height: 70vh;
-    padding: 3rem;
-    justify-content: center;
     align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
     backdrop-filter: blur(100px);
+}
+
+.current {
+    background: linear-gradient(#e35, #e35);
+    color: white;
+    font-family: 'Merienda', cursive;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    width: 12rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.current-score {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.player {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2fr 2fr 3fr;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.75s;
+}
+
+.score {
+    align-self: start;
+    font-size: 5rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
