@@ -17,6 +17,7 @@ let currentScore = 0;
 let scores = [0, 0];
 let activePlayer = 0;
 let playing = true;
+const winningScore = 100;
 
 // Initializer
 const init = function () {
@@ -70,7 +71,7 @@ btnHoldEl.addEventListener('click', function () {
         document.querySelector(`.score--${activePlayer}`).textContent = scores[activePlayer];
     }
 
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= winningScore) {
         playing = false;
         document.querySelector('.dice').classList.add('hidden');
         document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
