@@ -53,7 +53,7 @@ btnRollEl.addEventListener('click', function () {
     if (playing) {
         const randomNum = Math.trunc(Math.random() * 6) + 1;
         diceEl.classList.remove('hidden');
-        diceEl.src = `../Resources/${randomNum}_dots.png`;
+        diceEl.src = `./Resources/${randomNum}_dots.png`;
 
         if (randomNum === 1) {
             switchPlayer();
