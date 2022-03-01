@@ -27,15 +27,15 @@ main {
 .btn {
     text-align: center;
     font-family: 'Playball', cursive;
-    font-size: 1.5rem;
-    width: 12rem;
-    height: 3rem;
+    font-size: calc(0.75vw + 0.5rem);
+    width: 12vw;
+    height: 5vh;
     position: absolute;
     border: 0;
     border-radius: 40px;
-    color: #534E5A;
+    color: #534e5a;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
@@ -52,7 +52,14 @@ main {
     bottom: 2rem;
 }
 
+.dice {
+    width: fit-content;
+    position: absolute;
+    top: 10rem;
+}
+
 .btn:active {
+    background-color: rgba(255, 255, 255, 0.5);
     transform: translate(0, 5px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
     transition: all 0.2s;
@@ -63,6 +70,7 @@ main {
 }
 
 .players {
+    overflow: hidden;
     width: 100%;
     height: 100%;
     display: flex;
@@ -72,6 +80,21 @@ main {
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
     backdrop-filter: blur(100px);
+}
+
+.player {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2fr 2fr 3fr;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.75s;
+}
+
+.player--active {
+    background-color: rgba(255, 255, 255, 0.15);
+
 }
 
 .current {
@@ -88,19 +111,17 @@ main {
     border-radius: 15px;
 }
 
+.player--winner {
+    background-color: #3e6d439f;
+}
+
+.hidden {
+    display: none;
+}
+
 .current-score {
     font-weight: bold;
     font-size: 2rem;
-}
-
-.player {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 2fr 2fr 3fr;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.75s;
 }
 
 .score {
